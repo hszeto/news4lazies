@@ -1,13 +1,15 @@
 <div class="displaybody" >
-<!-- Loop through each feed -->
+<!-- Loop through 9 feeds -->
 <% (0..8).each do |f| %>
 	<div class="square">
 	   <div class="content">
 	        <div class="table">
 	            <div class="table-cell">
 				<center>
+					<!-- Title of this feed -->
 					<%= @feeds["urls"][f]["title"]%>
 					<br>
+					<!-- Image of this feed. Link to the feed website -->
 					<%= link_to image_tag(@feeds["urls"][f]["img"], 
 						{:class => "rs", 
 						 :onerror => " this.src='assets/noimage.gif' "}),

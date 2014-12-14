@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-  <title>Httpartytest</title>
+  <title>News for Lazies</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application' %>
+  <!-- Link to Google font -->
   <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
+   <!-- Bootstrap -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
   <%= csrf_meta_tags %>
@@ -14,8 +16,10 @@
 
 <body>
 
-	<%= render partial: 'layouts/nav'%>
+  <!-- Render Nav bar -->
+	<%= render partial: 'layouts/nav'%> 
 
+  <!-- Render HTML body -->
 	<%= yield %>
 
 </body>
