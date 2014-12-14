@@ -1,0 +1,51 @@
+<div class="displaybody">
+<!-- Loop through each feed -->
+<% (0..8).each do |f| %>
+	<div class="square">
+	   <div class="content">
+	        <div class="table">
+	            <div class="table-cell">
+
+				<center>
+					<%= link_to image_tag(@feeds["urls"][f]["img"], {:class => "rs", :onerror=>"console.log(this);"}),
+							@feeds["urls"][f]["url"] %>
+						<br>
+					<%= @feeds["urls"][f]["title"]%>
+				</center>
+
+	            </div>
+	        </div>
+	    </div>
+	</div>
+<% end %>
+</div>
+
+<!-- Show all news feeds -->
+
+<div class="container displaybody">
+	<div class="row">
+		<ul id="list-style-type">
+			<!-- Loop through each feed -->
+			<% (0..8).each do |f| %>
+				<li class="col-xs-6 col-md-4">
+
+					<% if [@feeds["urls"][f]["img"]].any? %>
+					<%= image_tag(@feeds["urls"][f]["img"], :class => "showimg") %>
+						<br>
+					<span translate="no"><%= @feeds["urls"][f]["title"]%></span>
+					<hr>
+					<% end %>
+				</li>	
+			<% end %>
+		</ul>
+	</div>
+</div>
+
+<!-- Loop through each feed with javascript
+<script>
+	var feedsjs = <%= @feeds.to_json.html_safe %>;
+ 	for (i=0; i<5; i++){
+		console.log(feedsjs.urls[i].title);
+ 	}
+</script>
+ -->
