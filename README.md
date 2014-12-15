@@ -6,7 +6,7 @@ Used Httparty gem to put this api.
 
 Render JSON data with CSS and Bootstrap.
 
-rails _4.0.4_ new news4lazies --database=postgresql
+rails new news4lazies --database=postgresql
 
 For Heroku deployment: 	
 	/config/environments/production.rb :
