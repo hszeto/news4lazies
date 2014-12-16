@@ -23,6 +23,9 @@
 body {
 	font-size: 100%; /* Makes the font go to 16 pixels */
 	background-color: grey !important;
+    background: url(background.jpg);
+    background-attachment:fixed;
+
 }
 
 h1 {
@@ -50,8 +53,12 @@ h1 {
     width: 30%;
     padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
     margin:1.66%;
-    background-color:#1E1E1E;
     overflow:hidden;
+    background-color:#1E1E1E;
+}
+
+.square:hover { 
+    background-color:#5E5E5E;
 }
 
 .content {
