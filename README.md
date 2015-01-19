@@ -1,13 +1,12 @@
-A simple site with random news feeds. 
-
-API provided by sharethis.com.
-
-Used Httparty gem to put this api.
-
-Render JSON data with CSS and Bootstrap.
-
-rails new news4lazies --database=postgresql
-
+A random news feed site built with Ruby on Rails<br>
+<br>
+API provided by sharethis.com.<br>
+Used Httparty gem to pull this api.<br>
+Render JSON data with CSS and Bootstrap.<br>
+<br>
+Setup:<br>
+$ rails new news4lazies --database=postgresql<br>
+<br>
 For Heroku deployment: 	
 	/config/environments/production.rb :
 		config.serve_static_assets = true
@@ -18,3 +17,11 @@ For Heroku deployment:
 
 	In terminal, run:
 		RAILS_ENV=production bundle exec rake assets:precompile
+
+<br>
+Usage:<br>
+- Clone this repo
+- $ bundle install
+- $ rails s
+- open browser
+- goto localhost:3000
